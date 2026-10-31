@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Online Library - Home</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+
+  <!-- Navigation Header with Integrated Role Switcher -->
+  <header>
+    <div class="container">
+      <nav class="navbar">
+        <a href="index.html" class="logo">
+          <span class="logo-icon">&#128218;</span>
+          <div class="logo-text">
+            <span class="logo-title">Online Library</span>
+          </div>
+        </a>
+
+        <div class="nav-actions">
+          <div class="nav-role-switcher">
+            <a href="index.html" class="role-btn active">Guest</a>
+            <a href="catalogue.html" class="role-btn">User</a>
+            <a href="admin-dashboard.html" class="role-btn">Admin</a>
+          </div>
+
+          <ul class="nav-menu">
+            <li><a href="catalogue.html">Catalogue</a></li>
+            <li><a href="login.html" class="book-btn book-btn-small">Login</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Page Content -->
+  <main class="main-content">
+    <div class="container">
+
+      <!-- Hero Banner -->
+      <section class="hero-section">
+        <div class="hero-content">
+          <h1 class="hero-title">Welcome to our Online Library</h1>
+          <p class="hero-subtitle">
+            Discover a world of knowledge. Borrow, learn, and expand your mind with our curated collection of books.
+          </p>
+
+          <form action="catalogue.html" class="hero-search">
+            <input type="text" placeholder="Search by title, author, or category..." class="hero-search-input">
+            <button type="submit" class="book-btn">Search</button>
+          </form>
+
+          <div class="hero-stats">
+            <div class="stat-item"><strong>1,500+</strong> Books</div>
+            <div class="stat-item"><strong>12</strong> Categories</div>
+            <div class="stat-item"><strong>Free</strong> for Students</div>
+          </div>
+        </div>
+        <div class="hero-image-box">
+          <img src="images/hero-library5.jpg" alt="Library Hall" class="hero-image">
+        </div>
+      </section>
+
+      <!-- Best Sellers Section -->
+      <section>
+        <div class="section-header">
+          <h2 class="section-title">Popular & Best Selling Books</h2>
+          <p class="section-desc">Hand-picked books frequently borrowed by students across all departments.</p>
+        </div>
+
+        <div class="books-grid">
+          
+          <!-- Book Card 1 -->
+          <article class="book-card">
+            <img src="images/book-1.jpg" alt="Clean Code" class="book-cover-img">
+            <div class="book-meta">
+              <span class="book-category">Computer Science</span>
+              <span class="badge badge-available">Available</span>
+            </div>
+            <h3 class="book-title">Clean Code: A Handbook</h3>
+            <p class="book-author">By Robert C. Martin</p>
+            <a href="login.html" class="book-btn book-btn-block">Borrow Book</a>
+          </article>
+
+          <!-- Book Card 2 -->
+          <article class="book-card">
+            <img src="images/book-2.jpg" alt="The Pragmatic Programmer" class="book-cover-img">
+            <div class="book-meta">
+              <span class="book-category">Software Engineering</span>
+              <span class="badge badge-available">Available</span>
+            </div>
+            <h3 class="book-title">The Pragmatic Programmer</h3>
+            <p class="book-author">By David Thomas</p>
+            <a href="login.html" class="book-btn book-btn-block">Borrow Book</a>
+          </article>
+
+          <!-- Book Card 3 -->
+          <article class="book-card">
+            <img src="images/book-3.jpg" alt="Utopia" class="book-cover-img">
+            <div class="book-meta">
+              <span class="book-category">Dystopian Fiction</span>
+              <span class="badge badge-available">Available</span>
+            </div>
+            <h3 class="book-title">Utopia</h3>
+            <p class="book-author">By Ahmed Khaled Tawfik</p>
+            <a href="login.html" class="book-btn book-btn-block">Borrow Book</a>
+          </article>
+
+          <!-- Book Card 4 -->
+          <article class="book-card">
+            <img src="images/book-4.jpg" alt="The Da Vinci Code" class="book-cover-img">
+            <div class="book-meta">
+              <span class="book-category">Mystery & Thriller</span>
+              <span class="badge badge-available">Available</span>
+            </div>
+            <h3 class="book-title">The Da Vinci Code</h3>
+            <p class="book-author">By Dan Brown</p>
+            <a href="login.html" class="book-btn book-btn-block">Borrow Book</a>
+          </article>
+
+          <!-- Book Card 5 -->
+          <article class="book-card">
+            <img src="images/book-5.jpg" alt="The Alchemist" class="book-cover-img">
+            <div class="book-meta">
+              <span class="book-category">Fiction</span>
+              <span class="badge badge-available">Available</span>
+            </div>
+            <h3 class="book-title">The Alchemist</h3>
+            <p class="book-author">By Paulo Coelho</p>
+            <a href="login.html" class="book-btn book-btn-block">Borrow Book</a>
+          </article>
+
+          <!-- Book Card 6 -->
+          <article class="book-card">
+            <img src="images/book-6.jpg" alt="Atomic Habits" class="book-cover-img">
+            <div class="book-meta">
+              <span class="book-category">Self-Help</span>
+              <span class="badge badge-available">Available</span>
+            </div>
+            <h3 class="book-title">Atomic Habits</h3>
+            <p class="book-author">By James Clear</p>
+            <a href="login.html" class="book-btn book-btn-block">Borrow Book</a>
+          </article>
+
+          <!-- Book Card 7 -->
+          <article class="book-card">
+            <img src="images/book-7.jpg" alt="Harry Potter" class="book-cover-img">
+            <div class="book-meta">
+              <span class="book-category">Fantasy</span>
+              <span class="badge badge-available">Available</span>
+            </div>
+            <h3 class="book-title">Harry Potter & the Sorcerer's Stone</h3>
+            <p class="book-author">By J.K. Rowling</p>
+            <a href="login.html" class="book-btn book-btn-block">Borrow Book</a>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- Feature Highlights -->
+      <section class="features-container">
+        
+        <div class="feature-box">
+          <div class="feature-icon">&#128218;</div>
+          <h3 class="feature-title">Extensive Catalogue</h3>
+          <p class="feature-text">Search through thousands of textbooks and course-recommended reference materials.</p>
+        </div>
+
+        <div class="feature-box">
+          <div class="feature-icon">&#128257;</div>
+          <h3 class="feature-title">Easy Borrow & Return</h3>
+          <p class="feature-text">Fast borrowing process with a clear dashboard to manage your active borrowed books.</p>
+        </div>
+
+        <div class="feature-box">
+          <div class="feature-icon">&#127891;</div>
+          <h3 class="feature-title">Academic Access</h3>
+          <p class="feature-text">Designed specifically for college students to support your semester coursework.</p>
+        </div>
+
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Online Library System - IS231 Web Technology.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
