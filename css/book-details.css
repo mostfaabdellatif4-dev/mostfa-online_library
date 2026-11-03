@@ -1,0 +1,118 @@
+/* Back Link */
+.back-link {
+    display: inline-block;
+    color: #234e32;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+/* Hide every book by default */
+.book-detail {
+    display: none;
+}
+
+/* Show only the book matching the URL hash (#bk-101, #bk-102, ...) */
+.book-detail:target {
+    display: block;
+}
+
+/* Hide the "select a book" hint when any book is targeted */
+.book-detail:target~.detail-hint {
+    display: none;
+}
+
+/* Hint styling */
+.detail-hint {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+/* Page title inside each book */
+.detail-page-title {
+    color: #234e32;
+    margin-bottom: 10px;
+}
+
+.detail-page-id {
+    color: #718096;
+    margin-bottom: 20px;
+}
+
+/* Two column layout */
+.detail-layout {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.detail-cover {
+    width: 240px;
+    flex-shrink: 0;
+    text-align: center;
+}
+
+.detail-cover img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 1px solid #e2e8f0;
+    background-color: #edf2f7;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.detail-info {
+    flex: 1;
+    min-width: 260px;
+}
+
+.detail-title {
+    font-size: 22px;
+    color: #2d3748;
+    margin-bottom: 6px;
+}
+
+.detail-author {
+    font-size: 15px;
+    color: #718096;
+    margin-bottom: 10px;
+}
+
+.detail-desc {
+    font-size: 14px;
+    color: #4a5568;
+    line-height: 1.7;
+    margin: 16px 0;
+}
+
+.detail-meta {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.detail-meta li {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid #e2e8f0;
+    font-size: 14px;
+}
+
+.meta-label {
+    color: #718096;
+    font-weight: bold;
+}
+
+.detail-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}

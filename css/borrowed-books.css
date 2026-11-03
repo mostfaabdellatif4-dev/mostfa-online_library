@@ -1,0 +1,175 @@
+/* Page Header */
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.page-title {
+    color: #234e32;
+    font-size: 26px;
+    margin-bottom: 4px;
+}
+
+.page-subtitle {
+    color: #718096;
+    font-size: 14px;
+}
+
+/* Summary Strip */
+.summary-strip {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    margin-bottom: 24px;
+    overflow: hidden;
+}
+
+.summary-item {
+    flex: 1;
+    min-width: 120px;
+    padding: 16px 20px;
+    border-right: 1px solid #e2e8f0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.summary-item:last-child {
+    border-right: none;
+}
+
+.summary-label {
+    font-size: 12px;
+    font-weight: bold;
+    color: #718096;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.summary-value {
+    font-size: 22px;
+    font-weight: bold;
+    color: #234e32;
+}
+
+.summary-danger {
+    color: #c53030;
+}
+
+.summary-success {
+    color: #276749;
+}
+
+/* Table Card */
+.table-card {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+/* Borrow Table */
+.borrow-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.borrow-table thead {
+    background-color: #f7fafc;
+}
+
+.borrow-table th {
+    padding: 14px 16px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #4a5568;
+    text-align: left;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.borrow-table td {
+    padding: 14px 16px;
+    font-size: 14px;
+    color: #4a5568;
+    border-bottom: 1px solid #edf2f7;
+    vertical-align: middle;
+}
+
+.borrow-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.borrow-table tbody tr:hover {
+    background-color: #f9fafb;
+}
+
+/* Book Info Cell */
+.book-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.book-thumb {
+    width: 42px;
+    height: 58px;
+    object-fit: cover;
+    border-radius: 4px;
+    border: 1px solid #e2e8f0;
+    background-color: #edf2f7;
+    flex-shrink: 0;
+}
+
+.book-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    min-width: 0;
+}
+
+.book-name {
+    font-size: 14px;
+    font-weight: bold;
+    color: #2d3748;
+    text-decoration: none;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.book-name:hover {
+    color: #234e32;
+    text-decoration: underline;
+}
+
+.book-writer {
+    font-size: 12px;
+    color: #718096;
+}
+
+/* Due Date Highlight */
+.due-overdue {
+    color: #c53030;
+    font-weight: bold;
+}
+
+/* Action Cell */
+.cell-action {
+    text-align: right;
+}
+
+/* Table Note */
+.table-note {
+    font-size: 13px;
+    color: #718096;
+    margin-top: 12px;
+    text-align: center;
+}

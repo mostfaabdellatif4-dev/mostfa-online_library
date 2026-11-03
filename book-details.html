@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Online Library - Book Details</title>
   <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/book-details.css">
 </head>
+
 <body>
 
-  <!-- Navigation Header with User Role State -->
   <header>
     <div class="container">
       <nav class="navbar">
@@ -19,7 +22,6 @@
             <span class="logo-subtitle">Member Portal</span>
           </div>
         </a>
-
         <div class="nav-actions">
           <div class="nav-role-switcher">
             <span class="role-label">Role:</span>
@@ -27,7 +29,6 @@
             <a href="catalogue.html" class="role-btn active">User</a>
             <a href="admin-dashboard.html" class="role-btn">Admin</a>
           </div>
-
           <ul class="nav-menu">
             <li><a href="index.html">Home</a></li>
             <li><a href="catalogue.html">Catalogue</a></li>
@@ -39,23 +40,293 @@
     </div>
   </header>
 
-  <!-- Page Content -->
   <main class="main-content">
     <div class="container">
-      <!-- Team Member-->
-      <a href="catalogue.html" style="color: #234e32; font-weight: bold; text-decoration: none;">&larr; Back to Catalogue</a>
-      <div class="detail-card" style="margin-top: 20px;">
-        <h1 style="color: #234e32; margin-bottom: 10px;">Book Details</h1>
-        <p style="color: #718096; margin-bottom: 20px;">Book ID: #BK-101</p>
-        <div class="empty-box">
-          <p><strong>Book Details Placeholder</strong></p>
-          <p>work here.</p>
+
+      <a href="catalogue.html" class="back-link">&larr; Back to Catalogue</a>
+
+      <!-- Book 1: Clean Code -->
+      <div id="bk-101" class="book-detail">
+        <div class="detail-card">
+          <h1 class="detail-page-title">Book Details</h1>
+          <p class="detail-page-id">Book ID: #BK-101</p>
+          <div class="detail-layout">
+            <div class="detail-cover">
+              <img src="images/book-1.jpg" alt="Clean Code">
+              <span class="badge badge-available">Available</span>
+            </div>
+            <div class="detail-info">
+              <h2 class="detail-title">Clean Code: A Handbook of Agile Software Craftsmanship</h2>
+              <p class="detail-author">By Robert C. Martin</p>
+              <p class="book-category">Computer Science</p>
+              <p class="detail-desc">Even bad code can function. But if code is not clean, it can bring a software
+                organization to its knees. This book describes the principles, patterns, and practices of writing clean
+                code, and it shows how to turn bad code into good code through real case studies.</p>
+              <ul class="detail-meta">
+                <li><span class="meta-label">ISBN</span><span>978-0132350884</span></li>
+                <li><span class="meta-label">Publisher</span><span>Prentice Hall</span></li>
+                <li><span class="meta-label">Publish Year</span><span>2008</span></li>
+                <li><span class="meta-label">Pages</span><span>464</span></li>
+                <li><span class="meta-label">Language</span><span>English</span></li>
+                <li><span class="meta-label">Shelf Location</span><span>CS-A-12</span></li>
+              </ul>
+              <div class="detail-actions">
+                <a href="borrowed-books.html" class="book-btn book-btn-wide">Borrow Book</a>
+                <a href="catalogue.html" class="book-btn book-btn-wide book-btn-secondary">Back to Catalogue</a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+
+      <!-- Book 2: The Pragmatic Programmer -->
+      <div id="bk-102" class="book-detail">
+        <div class="detail-card">
+          <h1 class="detail-page-title">Book Details</h1>
+          <p class="detail-page-id">Book ID: #BK-102</p>
+          <div class="detail-layout">
+            <div class="detail-cover">
+              <img src="images/book-2.jpg" alt="The Pragmatic Programmer">
+              <span class="badge badge-available">Available</span>
+            </div>
+            <div class="detail-info">
+              <h2 class="detail-title">The Pragmatic Programmer</h2>
+              <p class="detail-author">By David Thomas</p>
+              <p class="book-category">Software Engineering</p>
+              <p class="detail-desc">The Pragmatic Programmer cuts through the increasing specialization of modern
+                software development to examine the core process: taking a requirement and producing working,
+                maintainable code. It covers topics from personal responsibility to architectural techniques.</p>
+              <ul class="detail-meta">
+                <li><span class="meta-label">ISBN</span><span>978-0201616224</span></li>
+                <li><span class="meta-label">Publisher</span><span>Addison-Wesley</span></li>
+                <li><span class="meta-label">Publish Year</span><span>1999</span></li>
+                <li><span class="meta-label">Pages</span><span>352</span></li>
+                <li><span class="meta-label">Language</span><span>English</span></li>
+                <li><span class="meta-label">Shelf Location</span><span>SE-B-04</span></li>
+              </ul>
+              <div class="detail-actions">
+                <a href="borrowed-books.html" class="book-btn book-btn-wide">Borrow Book</a>
+                <a href="catalogue.html" class="book-btn book-btn-wide book-btn-secondary">Back to Catalogue</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Book 3: Utopia -->
+      <div id="bk-103" class="book-detail">
+        <div class="detail-card">
+          <h1 class="detail-page-title">Book Details</h1>
+          <p class="detail-page-id">Book ID: #BK-103</p>
+          <div class="detail-layout">
+            <div class="detail-cover">
+              <img src="images/book-3.jpg" alt="Utopia">
+              <span class="badge badge-available">Available</span>
+            </div>
+            <div class="detail-info">
+              <h2 class="detail-title">Utopia</h2>
+              <p class="detail-author">By Ahmed Khaled Tawfik</p>
+              <p class="book-category">Dystopian Fiction</p>
+              <p class="detail-desc">In a dystopian future where the world has collapsed, a young man discovers the dark
+                truth behind the perfect society he lives in. A gripping Arabic sci-fi novel about freedom, identity,
+                and the cost of utopia.</p>
+              <ul class="detail-meta">
+                <li><span class="meta-label">ISBN</span><span>978-9771441365</span></li>
+                <li><span class="meta-label">Publisher</span><span>Bloomsbury Qatar Foundation</span></li>
+                <li><span class="meta-label">Publish Year</span><span>2008</span></li>
+                <li><span class="meta-label">Pages</span><span>380</span></li>
+                <li><span class="meta-label">Language</span><span>Arabic</span></li>
+                <li><span class="meta-label">Shelf Location</span><span>FIC-C-07</span></li>
+              </ul>
+              <div class="detail-actions">
+                <a href="borrowed-books.html" class="book-btn book-btn-wide">Borrow Book</a>
+                <a href="catalogue.html" class="book-btn book-btn-wide book-btn-secondary">Back to Catalogue</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Book 4: The Da Vinci Code -->
+      <div id="bk-104" class="book-detail">
+        <div class="detail-card">
+          <h1 class="detail-page-title">Book Details</h1>
+          <p class="detail-page-id">Book ID: #BK-104</p>
+          <div class="detail-layout">
+            <div class="detail-cover">
+              <img src="images/book-4.jpg" alt="The Da Vinci Code">
+              <span class="badge badge-available">Available</span>
+            </div>
+            <div class="detail-info">
+              <h2 class="detail-title">The Da Vinci Code</h2>
+              <p class="detail-author">By Dan Brown</p>
+              <p class="book-category">Mystery &amp; Thriller</p>
+              <p class="detail-desc">A murder in the Louvre and a mysterious cipher draw symbologist Robert Langdon into
+                a fast-paced race across Europe to uncover a centuries-old secret that could shake the foundations of
+                religion and history.</p>
+              <ul class="detail-meta">
+                <li><span class="meta-label">ISBN</span><span>978-0307474278</span></li>
+                <li><span class="meta-label">Publisher</span><span>Doubleday</span></li>
+                <li><span class="meta-label">Publish Year</span><span>2003</span></li>
+                <li><span class="meta-label">Pages</span><span>489</span></li>
+                <li><span class="meta-label">Language</span><span>English</span></li>
+                <li><span class="meta-label">Shelf Location</span><span>MYS-D-02</span></li>
+              </ul>
+              <div class="detail-actions">
+                <a href="borrowed-books.html" class="book-btn book-btn-wide">Borrow Book</a>
+                <a href="catalogue.html" class="book-btn book-btn-wide book-btn-secondary">Back to Catalogue</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Book 5: The Alchemist -->
+      <div id="bk-105" class="book-detail">
+        <div class="detail-card">
+          <h1 class="detail-page-title">Book Details</h1>
+          <p class="detail-page-id">Book ID: #BK-105</p>
+          <div class="detail-layout">
+            <div class="detail-cover">
+              <img src="images/book-5.jpg" alt="The Alchemist">
+              <span class="badge badge-available">Available</span>
+            </div>
+            <div class="detail-info">
+              <h2 class="detail-title">The Alchemist</h2>
+              <p class="detail-author">By Paulo Coelho</p>
+              <p class="book-category">Fiction</p>
+              <p class="detail-desc">An inspirational novel about a young shepherd boy named Santiago who travels from
+                Spain to the Egyptian desert in search of a treasure buried near the Pyramids. Along the way he learns
+                deep truths about following his personal legend.</p>
+              <ul class="detail-meta">
+                <li><span class="meta-label">ISBN</span><span>978-0062315007</span></li>
+                <li><span class="meta-label">Publisher</span><span>HarperOne</span></li>
+                <li><span class="meta-label">Publish Year</span><span>1988</span></li>
+                <li><span class="meta-label">Pages</span><span>208</span></li>
+                <li><span class="meta-label">Language</span><span>English</span></li>
+                <li><span class="meta-label">Shelf Location</span><span>FIC-E-11</span></li>
+              </ul>
+              <div class="detail-actions">
+                <a href="borrowed-books.html" class="book-btn book-btn-wide">Borrow Book</a>
+                <a href="catalogue.html" class="book-btn book-btn-wide book-btn-secondary">Back to Catalogue</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Book 6: Atomic Habits (Borrowed) -->
+      <div id="bk-106" class="book-detail">
+        <div class="detail-card">
+          <h1 class="detail-page-title">Book Details</h1>
+          <p class="detail-page-id">Book ID: #BK-106</p>
+          <div class="detail-layout">
+            <div class="detail-cover">
+              <img src="images/book-6.jpg" alt="Atomic Habits">
+              <span class="badge badge-borrowed">Borrowed</span>
+            </div>
+            <div class="detail-info">
+              <h2 class="detail-title">Atomic Habits</h2>
+              <p class="detail-author">By James Clear</p>
+              <p class="book-category">Self-Help</p>
+              <p class="detail-desc">A practical guide that reveals how tiny changes in behavior can lead to remarkable
+                results. James Clear explains the science of habit formation and offers a proven framework for building
+                good habits and breaking bad ones.</p>
+              <ul class="detail-meta">
+                <li><span class="meta-label">ISBN</span><span>978-0735211292</span></li>
+                <li><span class="meta-label">Publisher</span><span>Avery</span></li>
+                <li><span class="meta-label">Publish Year</span><span>2018</span></li>
+                <li><span class="meta-label">Pages</span><span>320</span></li>
+                <li><span class="meta-label">Language</span><span>English</span></li>
+                <li><span class="meta-label">Shelf Location</span><span>SH-F-05</span></li>
+              </ul>
+              <div class="detail-actions">
+                <span class="book-btn book-btn-wide book-btn-disabled">Currently Borrowed</span>
+                <a href="catalogue.html" class="book-btn book-btn-wide book-btn-secondary">Back to Catalogue</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Book 7: Harry Potter -->
+      <div id="bk-107" class="book-detail">
+        <div class="detail-card">
+          <h1 class="detail-page-title">Book Details</h1>
+          <p class="detail-page-id">Book ID: #BK-107</p>
+          <div class="detail-layout">
+            <div class="detail-cover">
+              <img src="images/book-7.jpg" alt="Harry Potter">
+              <span class="badge badge-available">Available</span>
+            </div>
+            <div class="detail-info">
+              <h2 class="detail-title">Harry Potter &amp; the Sorcerer's Stone</h2>
+              <p class="detail-author">By J.K. Rowling</p>
+              <p class="book-category">Fantasy</p>
+              <p class="detail-desc">On his eleventh birthday, Harry Potter discovers he is a wizard and is invited to
+                study at Hogwarts School of Witchcraft and Wizardry. There he makes friends, learns magic, and faces a
+                dark secret about his past.</p>
+              <ul class="detail-meta">
+                <li><span class="meta-label">ISBN</span><span>978-0590353427</span></li>
+                <li><span class="meta-label">Publisher</span><span>Scholastic</span></li>
+                <li><span class="meta-label">Publish Year</span><span>1997</span></li>
+                <li><span class="meta-label">Pages</span><span>309</span></li>
+                <li><span class="meta-label">Language</span><span>English</span></li>
+                <li><span class="meta-label">Shelf Location</span><span>FAN-G-03</span></li>
+              </ul>
+              <div class="detail-actions">
+                <a href="borrowed-books.html" class="book-btn book-btn-wide">Borrow Book</a>
+                <a href="catalogue.html" class="book-btn book-btn-wide book-btn-secondary">Back to Catalogue</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Book 8: Nicholas Sparks -->
+      <div id="bk-108" class="book-detail">
+        <div class="detail-card">
+          <h1 class="detail-page-title">Book Details</h1>
+          <p class="detail-page-id">Book ID: #BK-108</p>
+          <div class="detail-layout">
+            <div class="detail-cover">
+              <img src="images/book-8.png" alt="Nicholas Sparks">
+              <span class="badge badge-available">Available</span>
+            </div>
+            <div class="detail-info">
+              <h2 class="detail-title">NICHOLAS SPARKS</h2>
+              <p class="detail-author">By NICHOLAS SPARKS</p>
+              <p class="book-category">Romance</p>
+              <p class="detail-desc">A heartfelt romance novel by Nicholas Sparks. A story of love, loss, and second
+                chances set against small-town America, told with the emotional depth that has made the author a
+                bestseller worldwide.</p>
+              <ul class="detail-meta">
+                <li><span class="meta-label">ISBN</span><span>978-0446696609</span></li>
+                <li><span class="meta-label">Publisher</span><span>Grand Central Publishing</span></li>
+                <li><span class="meta-label">Publish Year</span><span>2010</span></li>
+                <li><span class="meta-label">Pages</span><span>300</span></li>
+                <li><span class="meta-label">Language</span><span>English</span></li>
+                <li><span class="meta-label">Shelf Location</span><span>ROM-H-09</span></li>
+              </ul>
+              <div class="detail-actions">
+                <a href="borrowed-books.html" class="book-btn book-btn-wide">Borrow Book</a>
+                <a href="catalogue.html" class="book-btn book-btn-wide book-btn-secondary">Back to Catalogue</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hint shown only when no book is selected -->
+      <div class="detail-hint detail-card">
+        <h2 class="detail-page-title">Select a Book</h2>
+        <p class="detail-page-id">Please choose a book from the catalogue to view its details.</p>
+        <a href="catalogue.html" class="book-btn">Browse Catalogue</a>
+      </div>
+
     </div>
   </main>
 
-  <!-- Footer -->
   <footer>
     <div class="container">
       <p>&copy; 2026 Online Library System - IS231 Web Technology.</p>
@@ -63,4 +334,5 @@
   </footer>
 
 </body>
+
 </html>

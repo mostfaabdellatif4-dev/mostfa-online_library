@@ -1,18 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <title>Online Library - Admin Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Library - Administration</title>
   <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/admin.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
+
 <body>
 
   <!-- Navigation Header with Admin Role State -->
   <header>
     <div class="container">
       <nav class="navbar">
-        <a href="admin-dashboard.html" class="logo">
+        <a href="index.html" class="logo">
           <span class="logo-icon">&#128218;</span>
           <div class="logo-text">
             <span class="logo-title">Online Library</span>
@@ -24,13 +29,13 @@
           <div class="nav-role-switcher">
             <span class="role-label">Role:</span>
             <a href="index.html" class="role-btn">Guest</a>
-            <a href="catalogue.html" class="role-btn">User</a>
+            <a href="catalogue-user.html" class="role-btn">User</a>
             <a href="admin-dashboard.html" class="role-btn active">Admin</a>
           </div>
 
           <ul class="nav-menu">
             <li><a href="admin-dashboard.html" style="color: #234e32; font-weight: bold;">Dashboard</a></li>
-            <li><a href="book-form.html">+ Add Book</a></li>
+            <li><a href="book-form.html">Books management</a></li>
             <li><a href="index.html" class="book-btn book-btn-small book-btn-secondary">Logout</a></li>
           </ul>
         </div>
@@ -41,16 +46,140 @@
   <!-- Page Content -->
   <main class="main-content">
     <div class="container">
-      <!-- Team Member: Place admin books management table and actions here -->
+
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
-        <h1 style="color: #234e32;">Administrator Book Management</h1>
+        <h1 style="color: #234e32;">Administration</h1>
       </div>
-      <div class="empty-box">
-        <p><strong>Admin Book List Placeholder</strong></p>
-        <p>work here.</p>
+      <div>
+        <div class="section-header">
+          <h3 style="color: #234e32;">Dashboard</h3>
+        </div>
+
+        <!-- Dashboard Container -->
+        <!-- Statistic Cards Grid -->
+        <div class="stats-grid">
+          <div class="cards-column">
+            
+            <!-- Card 1: Total Books -->
+            <div class="stat-card">
+              <div class="stat-content">
+                <span class="stat-title">Total Books</span>
+                <span class="stat-number">1864</span>
+              </div>
+              <div class="stat-icon">📚</div>
+            </div>
+
+            <!-- Card 2: Total Users -->
+            <div class="stat-card">
+              <div class="stat-content">
+                <span class="stat-title">Total Users</span>
+                <span class="stat-number">100</span>
+              </div>
+              <div class="stat-icon">👤</div>
+            </div>
+
+            <!-- Card 3: Categories -->
+            <div class="stat-card">
+              <div class="stat-content">
+                <span class="stat-title">Categories</span>
+                <span class="stat-number">12</span>
+              </div>
+              <div class="stat-icon">🗂️</div>
+            </div>
+          </div>
+
+          <div class="chart-card">
+            <h3>Book Status Overview</h3>
+            <div style="max-width: 300px; margin: 0 auto;">
+              <canvas id="bookStatusChart"></canvas>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- "View All" Link -->
+        <div class="section-header">
+          <h3 style="color: #234e32;">Recent Borrowings</h3>
+          <a href="detailed-info.html" class="form-link" style="font-size: 15px;">View All</a> 
+        </div>
+        <div>
+          <form action="#" class="search-toolbar" onsubmit="return false;">
+            <div class="search-input-wrapper">
+              <input type="text" class="search-input" placeholder="Search by username or email...">
+              <button type="submit" class="search-icon-btn" title="Search">🔍</button>
+            </div>
+            <select class="select">
+              <option value="all">All Statuses</option>
+              <option value="available">Available</option>
+              <option value="borrowed">Borrowed</option>
+              <option value="overdue">Overdue</option>
+              <option value="returned">Returned</option>
+            </select>
+          </form>
+        </div>
+
+      </div>
+      <div class="data-table">
+        <table>
+          <thead>
+            <tr>
+              <th>Username</th>
+              <th>Book Name</th>
+              <th>Book Category</th>
+              <th>Due Date</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+        
+          <tbody>
+            <!-- One book = one row -->
+            <tr data-status="available">
+              <td>Ahmed</td>
+              <td>Utopia</td>
+              <td>Fiction</td>
+              <td>2026-11-01</td>
+              <td><span class="badge badge-available">Available</span></td>
+            </tr>
+            <tr data-status="borrowed">
+              <td>Ahmed</td>
+              <td>Utopia</td>
+              <td>Fiction</td>
+              <td>2026-11-01</td>
+              <td><span class="badge badge-borrowed">Borrowed</span></td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </main>
+
+  <!-- pie chart card --> 
+  <script>
+    const ctx = document.getElementById('bookStatusChart').getContext('2d');
+    const bookStatusChart = new Chart(ctx, {
+        type: 'pie',
+        data: {
+            labels: ['Borrowed', 'Returned', 'Overdue'],
+            datasets: [{
+                data: [45, 25, 30],
+                backgroundColor: [
+                    '#ebc174', // Amber for Borrowed
+                    '#2ad661', // Green for Returned
+                    '#e85b19'  // Red for Overdue
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: 'bottom'
+                }
+            }
+        }
+    });
+  </script>
 
   <!-- Footer -->
   <footer>

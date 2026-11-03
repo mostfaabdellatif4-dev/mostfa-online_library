@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Online Library - My Borrowed Books</title>
   <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/borrowed-books.css">
 </head>
+
 <body>
 
   <!-- Navigation Header with User Role State -->
@@ -25,7 +28,7 @@
             <span class="role-label">Role:</span>
             <a href="index.html" class="role-btn">Guest</a>
             <a href="catalogue.html" class="role-btn active">User</a>
-            <a href="admin-dashboard.html" class="role-btn">Admin</a>
+            <a href="login.html" class="role-btn">Admin</a>
           </div>
 
           <ul class="nav-menu">
@@ -42,12 +45,128 @@
   <!-- Page Content -->
   <main class="main-content">
     <div class="container">
-      <!-- Team Member -->
-      <h1 style="color: #234e32; margin-bottom: 20px;">My Borrowed Books</h1>
-      <div class="empty-box">
-        <p><strong>Borrowed Books List Placeholder</strong></p>
-        <p>work here.</p>
+
+      <!-- Page Header -->
+      <div class="page-header">
+        <div>
+          <h1 class="page-title">My Borrowed Books</h1>
+          <p class="page-subtitle">Manage your active loans, due dates and returns.</p>
+        </div>
+        <a href="catalogue.html" class="book-btn">+ Borrow New Book</a>
       </div>
+
+      <!-- Summary Strip -->
+      <div class="summary-strip">
+        <div class="summary-item">
+          <span class="summary-label">Active</span>
+          <span class="summary-value">2</span>
+        </div>
+        <div class="summary-item">
+          <span class="summary-label">Overdue</span>
+          <span class="summary-value summary-danger">1</span>
+        </div>
+        <div class="summary-item">
+          <span class="summary-label">Returned</span>
+          <span class="summary-value summary-success">1</span>
+        </div>
+        <div class="summary-item">
+          <span class="summary-label">Total</span>
+          <span class="summary-value">4</span>
+        </div>
+      </div>
+
+      <!-- Borrowed Books Table -->
+      <div class="table-card">
+        <table class="borrow-table">
+          <thead>
+            <tr>
+              <th style="width: 45%;">Book</th>
+              <th>Borrowed On</th>
+              <th>Due Date</th>
+              <th>Status</th>
+              <th style="text-align: right;">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+
+            <tr>
+              <td>
+                <div class="book-info">
+                  <img src="images/book-1.jpg" alt="Clean Code" class="book-thumb">
+                  <div class="book-text">
+                    <a href="book-details.html#bk-101" class="book-name">Clean Code: A Handbook</a>
+                    <span class="book-writer">By Robert C. Martin</span>
+                  </div>
+                </div>
+              </td>
+              <td>10 Feb 2026</td>
+              <td>24 Feb 2026</td>
+              <td><span class="badge badge-borrowed">Borrowed</span></td>
+              <td class="cell-action">
+                <a href="borrowed-books.html" class="book-btn book-btn-small book-btn-secondary">Return</a>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <div class="book-info">
+                  <img src="images/book-5.jpg" alt="The Alchemist" class="book-thumb">
+                  <div class="book-text">
+                    <a href="book-details.html#bk-105" class="book-name">The Alchemist</a>
+                    <span class="book-writer">By Paulo Coelho</span>
+                  </div>
+                </div>
+              </td>
+              <td>05 Feb 2026</td>
+              <td>19 Feb 2026</td>
+              <td><span class="badge badge-borrowed">Borrowed</span></td>
+              <td class="cell-action">
+                <a href="borrowed-books.html" class="book-btn book-btn-small book-btn-secondary">Return</a>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <div class="book-info">
+                  <img src="images/book-6.jpg" alt="Atomic Habits" class="book-thumb">
+                  <div class="book-text">
+                    <a href="book-details.html#bk-106" class="book-name">Atomic Habits</a>
+                    <span class="book-writer">By James Clear</span>
+                  </div>
+                </div>
+              </td>
+              <td>12 Jan 2026</td>
+              <td class="due-overdue">26 Jan 2026</td>
+              <td><span class="badge badge-overdue">Overdue</span></td>
+              <td class="cell-action">
+                <a href="borrowed-books.html" class="book-btn book-btn-small book-btn-danger">Return Now</a>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <div class="book-info">
+                  <img src="images/book-3.jpg" alt="Utopia" class="book-thumb">
+                  <div class="book-text">
+                    <a href="book-details.html#bk-103" class="book-name">Utopia</a>
+                    <span class="book-writer">By Ahmed Khaled Tawfik</span>
+                  </div>
+                </div>
+              </td>
+              <td>20 Dec 2025</td>
+              <td>03 Jan 2026</td>
+              <td><span class="badge badge-returned">Returned</span></td>
+              <td class="cell-action">
+                <a href="catalogue.html" class="book-btn book-btn-small book-btn-secondary">Borrow Again</a>
+              </td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+
+      <p class="table-note">Returned books remain visible in this list for 30 days after the return date.</p>
+
     </div>
   </main>
 
@@ -59,4 +178,5 @@
   </footer>
 
 </body>
+
 </html>

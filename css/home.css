@@ -78,7 +78,8 @@
 
 /* Best Sellers Section */
 .section-header {
-  text-align: center;
+  display: block !important;
+  text-align: center !important;
   margin-bottom: 30px;
 }
 
@@ -98,6 +99,7 @@
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
+  align-items: stretch; 
   margin-bottom: 50px;
 }
 
@@ -105,6 +107,12 @@
   flex: 1;
   min-width: 220px;
   max-width: 250px;
+  display: flex;
+  flex-direction: column; 
+}
+
+.books-grid .book-card a.book-btn {
+  margin-top: auto; 
 }
 
 /* Feature Highlights */

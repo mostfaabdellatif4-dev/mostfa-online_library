@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Online Library - Catalogue</title>
   <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/catalogue.css">
 </head>
+
 <body>
 
-  <!-- Navigation Header with User Role State -->
+  <!-- Navigation Header with Guest Role State -->
   <header>
     <div class="container">
       <nav class="navbar">
@@ -16,23 +20,22 @@
           <span class="logo-icon">&#128218;</span>
           <div class="logo-text">
             <span class="logo-title">Online Library</span>
-            <span class="logo-subtitle">Member Portal</span>
+            <span class="logo-subtitle">Academic Portal</span>
           </div>
         </a>
 
         <div class="nav-actions">
           <div class="nav-role-switcher">
             <span class="role-label">Role:</span>
-            <a href="index.html" class="role-btn">Guest</a>
-            <a href="catalogue.html" class="role-btn active">User</a>
-            <a href="admin-dashboard.html" class="role-btn">Admin</a>
+            <a href="catalogue.html" class="role-btn active">Guest</a>
+            <a href="login.html" class="role-btn">User</a>
+            <a href="login.html" class="role-btn">Admin</a>
           </div>
 
           <ul class="nav-menu">
             <li><a href="index.html">Home</a></li>
             <li><a href="catalogue.html" style="color: #234e32; font-weight: bold;">Catalogue</a></li>
-            <li><a href="borrowed-books.html">My Borrowed</a></li>
-            <li><a href="index.html" class="book-btn book-btn-small book-btn-secondary">Logout</a></li>
+            <li><a href="login.html" class="book-btn book-btn-small">Login</a></li>
           </ul>
         </div>
       </nav>
@@ -42,11 +45,194 @@
   <!-- Page Content -->
   <main class="main-content">
     <div class="container">
-      <!-- Team Member -->
-      <h1 style="color: #234e32; margin-bottom: 20px;">Book Catalogue & Search</h1>
-      <div class="empty-box">
-        <p><strong>work here</p>
+
+      <!-- Page Header -->
+      <div class="page-header">
+        <h1 class="page-title">Explore Library Catalogue</h1>
+        <p class="page-desc">Search and discover our collection of textbooks, course references, and literature.</p>
       </div>
+
+      <!-- Catalogue Main Layout -->
+      <div class="catalogue-layout">
+
+        <!-- Sidebar Filters -->
+        <aside class="catalogue-sidebar">
+          
+          <div class="filter-box">
+            <h3 class="filter-title">Search Books</h3>
+            <form action="catalogue.html" class="sidebar-search">
+              <input type="text" placeholder="Title, author, keyword..." class="input-field">
+              <button type="submit" class="book-btn book-btn-block">Search</button>
+            </form>
+          </div>
+
+          <div class="filter-box">
+            <h3 class="filter-title">Categories</h3>
+            <ul class="filter-list">
+              <li><a href="catalogue.html" class="active">All Categories (8)</a></li>
+              <li><a href="catalogue.html">Computer Science (1)</a></li>
+              <li><a href="catalogue.html">Software Engineering (1)</a></li>
+              <li><a href="catalogue.html">Dystopian Fiction (1)</a></li>
+              <li><a href="catalogue.html">Mystery &amp; Thriller (1)</a></li>
+              <li><a href="catalogue.html">Fiction (1)</a></li>
+              <li><a href="catalogue.html">Self-Help (1)</a></li>
+              <li><a href="catalogue.html">Fantasy (1)</a></li>
+              <li><a href="catalogue.html">Romance (1)</a></li>
+            </ul>
+          </div>
+
+          <div class="filter-box">
+            <h3 class="filter-title">Availability</h3>
+            <label class="filter-checkbox">
+              <input type="checkbox" checked> Available Only
+            </label>
+          </div>
+
+        </aside>
+
+        <!-- Main Books Content -->
+        <div class="catalogue-content">
+          
+          <div class="catalogue-meta-bar">
+            <p class="result-count">Showing <strong>8</strong> books in catalogue</p>
+            <div class="sort-box">
+              <label for="sort-select">Sort by:</label>
+              <select id="sort-select" class="sort-select">
+                <option value="popular">Most Popular</option>
+                <option value="newest">Newest Added</option>
+                <option value="title">Title (A-Z)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="catalogue-grid">
+
+            <!-- Book 1: Clean Code -->
+            <article class="book-card">
+              <a href="book-details.html#bk-101" class="book-cover-link">
+                <img src="images/book-1.jpg" alt="Clean Code" class="book-cover-img">
+              </a>
+              <div class="book-meta">
+                <span class="book-category">Computer Science</span>
+                <span class="badge badge-available">Available</span>
+              </div>
+              <h3 class="book-title"><a href="book-details.html#bk-101">Clean Code: A Handbook</a></h3>
+              <p class="book-author">By Robert C. Martin</p>
+              <p class="book-details-link"><a href="book-details.html#bk-101">View Details &rarr;</a></p>
+              <a href="login.html" class="book-btn book-btn-block">Borrow Book</a>
+            </article>
+
+            <!-- Book 2: The Pragmatic Programmer -->
+            <article class="book-card">
+              <a href="book-details.html#bk-102" class="book-cover-link">
+                <img src="images/book-2.jpg" alt="The Pragmatic Programmer" class="book-cover-img">
+              </a>
+              <div class="book-meta">
+                <span class="book-category">Software Engineering</span>
+                <span class="badge badge-available">Available</span>
+              </div>
+              <h3 class="book-title"><a href="book-details.html#bk-102">The Pragmatic Programmer</a></h3>
+              <p class="book-author">By David Thomas</p>
+              <p class="book-details-link"><a href="book-details.html#bk-102">View Details &rarr;</a></p>
+              <a href="login.html" class="book-btn book-btn-block">Borrow Book</a>
+            </article>
+
+            <!-- Book 3: Utopia -->
+            <article class="book-card">
+              <a href="book-details.html#bk-103" class="book-cover-link">
+                <img src="images/book-3.jpg" alt="Utopia" class="book-cover-img">
+              </a>
+              <div class="book-meta">
+                <span class="book-category">Dystopian Fiction</span>
+                <span class="badge badge-available">Available</span>
+              </div>
+              <h3 class="book-title"><a href="book-details.html#bk-103">Utopia</a></h3>
+              <p class="book-author">By Ahmed Khaled Tawfik</p>
+              <p class="book-details-link"><a href="book-details.html#bk-103">View Details &rarr;</a></p>
+              <a href="login.html" class="book-btn book-btn-block">Borrow Book</a>
+            </article>
+
+            <!-- Book 4: The Da Vinci Code -->
+            <article class="book-card">
+              <a href="book-details.html#bk-104" class="book-cover-link">
+                <img src="images/book-4.jpg" alt="The Da Vinci Code" class="book-cover-img">
+              </a>
+              <div class="book-meta">
+                <span class="book-category">Mystery &amp; Thriller</span>
+                <span class="badge badge-available">Available</span>
+              </div>
+              <h3 class="book-title"><a href="book-details.html#bk-104">The Da Vinci Code</a></h3>
+              <p class="book-author">By Dan Brown</p>
+              <p class="book-details-link"><a href="book-details.html#bk-104">View Details &rarr;</a></p>
+              <a href="login.html" class="book-btn book-btn-block">Borrow Book</a>
+            </article>
+
+            <!-- Book 5: The Alchemist -->
+            <article class="book-card">
+              <a href="book-details.html#bk-105" class="book-cover-link">
+                <img src="images/book-5.jpg" alt="The Alchemist" class="book-cover-img">
+              </a>
+              <div class="book-meta">
+                <span class="book-category">Fiction</span>
+                <span class="badge badge-available">Available</span>
+              </div>
+              <h3 class="book-title"><a href="book-details.html#bk-105">The Alchemist</a></h3>
+              <p class="book-author">By Paulo Coelho</p>
+              <p class="book-details-link"><a href="book-details.html#bk-105">View Details &rarr;</a></p>
+              <a href="login.html" class="book-btn book-btn-block">Borrow Book</a>
+            </article>
+
+            <!-- Book 6: Atomic Habits -->
+            <article class="book-card">
+              <a href="book-details.html#bk-106" class="book-cover-link">
+                <img src="images/book-6.jpg" alt="Atomic Habits" class="book-cover-img">
+              </a>
+              <div class="book-meta">
+                <span class="book-category">Self-Help</span>
+                <span class="badge badge-available">Available</span>
+              </div>
+              <h3 class="book-title"><a href="book-details.html#bk-106">Atomic Habits</a></h3>
+              <p class="book-author">By James Clear</p>
+              <p class="book-details-link"><a href="book-details.html#bk-106">View Details &rarr;</a></p>
+              <a href="login.html" class="book-btn book-btn-block">Borrow Book</a>
+            </article>
+
+            <!-- Book 7: Harry Potter -->
+            <article class="book-card">
+              <a href="book-details.html#bk-107" class="book-cover-link">
+                <img src="images/book-7.jpg" alt="Harry Potter" class="book-cover-img">
+              </a>
+              <div class="book-meta">
+                <span class="book-category">Fantasy</span>
+                <span class="badge badge-available">Available</span>
+              </div>
+              <h3 class="book-title"><a href="book-details.html#bk-107">Harry Potter &amp; the Sorcerer's Stone</a></h3>
+              <p class="book-author">By J.K. Rowling</p>
+              <p class="book-details-link"><a href="book-details.html#bk-107">View Details &rarr;</a></p>
+              <a href="login.html" class="book-btn book-btn-block">Borrow Book</a>
+            </article>
+
+            <!-- Book 8: Nicholas Sparks -->
+            <article class="book-card">
+              <a href="book-details.html#bk-108" class="book-cover-link">
+                <img src="images/book-8.png" alt="Nicholas Sparks" class="book-cover-img">
+              </a>
+              <div class="book-meta">
+                <span class="book-category">Romance</span>
+                <span class="badge badge-available">Available</span>
+              </div>
+              <h3 class="book-title"><a href="book-details.html#bk-108">The Notebook</a></h3>
+              <p class="book-author">By Nicholas Sparks</p>
+              <p class="book-details-link"><a href="book-details.html#bk-108">View Details &rarr;</a></p>
+              <a href="login.html" class="book-btn book-btn-block">Borrow Book</a>
+            </article>
+
+          </div>
+
+        </div>
+
+      </div>
+
     </div>
   </main>
 
@@ -58,4 +244,5 @@
   </footer>
 
 </body>
+
 </html>
